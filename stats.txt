@@ -1,0 +1,44 @@
+Poly coeff: 2048 | 20 Runs
+
+500 total votes:
+mean time: 1.35, percentage of error: 0, noise budget = 23
+
+1000 total votes:
+mean time: 2.65, percentage of error: 0, noise budget = 23
+
+1500 total votes:
+mean time: 3.75, percentage of error: 0, noise budget = 22
+
+2500 total votes:
+mean time: 4.2, percentage of error: 0, noise budget = 22
+
+5000 total votes:
+mean time: 8.25, percentage of error: 0, noise budget = 22
+
+7500 total votes:
+mean time: 16.18, percentage of error: 0, noise budget = 21
+
+10000 total votes:
+mean time: 19.88, percentage of error: 0, noise budget = 21
+
+15000 total votes:
+mean time: 31.83, percentage of error: 0, noise budget = 21
+
+20000 total votes:
+mean time: 42.17, percentage of error: 0, noise budget = 20
+
+25000 total votes:
+mean time: 51.51, percentage of error: 0, noise budget = 20
+
+30000 total votes:
+mean time: 62.93, percentage of error: 0, noise budget = 20
+
+35000 total votes:
+mean time: 73.5, percentage of error: 0, noise budget = 22
+
+50000 total votes: ## MAX LIMIT
+mean time: 141.81, percentage of error: 0, noise budget = 20
+
+100000 total votes: ## Doesn't work
+mean time: 8.25, percentage of error: 0, noise budget = 22
+
