@@ -1,5 +1,5 @@
 import numpy as np
-import HE_context, election_key, election_admin, voting, plot_results
+import HE_context, election_key, election_admin, voting
 from Crypto.Cipher import AES
 import timeit
 import matplotlib.pyplot as plt
@@ -55,9 +55,6 @@ def simulate_election(registered_n, rezyy):
         # print('what do you think')
         # print(HE.decrypt(election_results[0], decode_value=True))
         # Pie chart, where the slices will be ordered and plotted counter-clockwise:
-        print('wtf dude', intresults)
-        
-        plot_results.visualize(intresults, title, registered_n, candidates)
         return result_error
 
 
