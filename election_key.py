@@ -10,23 +10,7 @@ def generate_key():
     return get_random_bytes(security_level // 8)
 
 def generate_components(key):
-    components = [get_random_bytes(security_level // 8) for i in range(officials_number - 1)]
+    components = [get_random_bytes(security_level // 8) for _ in range(officials_number - 1)]
     final_component = byte_xor(key, *components)
     components.append(final_component)
     return components
-
-
-# key = get_random_bytes(security_level // 8) # 32 * 8 = 256
-# print('yo key', key)
-# yessir = generate_components(key)
-# print(yessir, len(yessir))
-
-# kss = byte_xor(*yessir)
-
-# if (kss == key):
-#     print('lets go brandon')
-
-
-# # print(key.decode("ISO-8859-1"))
-# # print(kss.decode("ISO-8859-1"))
-

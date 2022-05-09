@@ -5,7 +5,7 @@ sns.set()
 def visualize(results, title, registered, candidates):
     voter_n = sum(results)
     sizes = [x / voter_n for x in results]
-    pie_colors = [plt.cm.Accent(i + 4) for i in range(0, len(results))]
+    pie_colors = [plt.cm.Accent(i) for i in range(4, 7)] + [plt.cm.Set1(0)] + [plt.cm.Set1(i) for i in range(2, 8)] ### Custom colors
     fig, axes = plt.subplots(2, 1)
     ax = axes.ravel()
     ax[0].pie(sizes, labels = candidates, autopct='%1.1f%%', shadow=True, startangle=90, colors = pie_colors, normalize = False)
