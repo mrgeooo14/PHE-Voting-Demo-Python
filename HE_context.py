@@ -5,7 +5,7 @@ from Pyfhel import Pyfhel, PyPtxt, PyCtxt
 # #  Pallier encryption scheme that preserves addition
 
 plaintext_mod = 65537
-poly_coeff_mod = 4096
+poly_coeff_mod = 2048
 
 def generate_HE():
     print('~ Welcome to the Partially Homomorphic Encryption voting scheme ~')

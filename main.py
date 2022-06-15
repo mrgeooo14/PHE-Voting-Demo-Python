@@ -71,12 +71,11 @@ def simulate_election():
         return result_error
 
 if __name__ == "__main__":       
-    runs = 1
-    for i in range(runs):
-        simulate_election()
+    simulate_election()
 
     # error = total_errors / (candidate_number * runs)
 
     # print('')
     # print('testing ended : {} Runs'.format(runs))
     # print('{} total voters, HE percentage of error on result: {}'.format(total_registered, error * 100))
+    

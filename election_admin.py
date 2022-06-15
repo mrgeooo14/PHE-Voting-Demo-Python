@@ -6,7 +6,7 @@ from Crypto.Cipher import AES
 
 def generate_election():
     print('~~~~~Central Authorities~~~~~')
-    print('Please specfiy the title of your election:')
+    print('Please specify the title of your election:')
     title = str(input())
     print('How many candidates/options on the ballot?')
     c_n = int(input())
