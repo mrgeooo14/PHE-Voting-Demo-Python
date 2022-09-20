@@ -1,8 +1,12 @@
 import election_key
-import string, random
+import string
+import random
 from time import sleep
 from getpass import getpass
 from Crypto.Cipher import AES
+
+# Simulates a generation of a custom election defined by user input on the command line
+
 
 def generate_election():
     print('~~~~~Central Authorities~~~~~')
@@ -12,21 +16,24 @@ def generate_election():
     c_n = int(input())
     print('What are their names? ')
     candidates = [str(input()) for _ in range(0, c_n)]
-    salting = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(10))
+    salting = ''.join(random.choice(string.ascii_letters +
+                      string.digits) for _ in range(10))
     print('In which local polling station is the election being conducted?')
-    polling_place = bytes(str(input() + salting), encoding = 'utf-8')
+    polling_place = bytes(str(input() + salting), encoding='utf-8')
     print('How many registered voters do you want the simulation to have? (Note: Max 50000 to avoid errors)')
     total_registered = int(input())
     print('Sending election data to administrators...')
     sleep(2)
     return title, polling_place, candidates, total_registered
 
-# we need to encrypt the result of the election (again) (by the admin) so only the election officials can decrypt it
+# We need to encrypt the result of the election (again) (by the admin) so only the election officials can decrypt it
+# The password is stored on the file adminpass.txt to simulate an external password given from the authorities
 def distribute_key(polling):
     f = open('adminpass.txt', 'r')
     passw = f.read()
     print('~~~~~Election Administrators~~~~~')
-    pass_input = getpass('Please input the password given from the authorities: ')
+    pass_input = getpass(
+        'Please input the password given from the authorities: ')
     if pass_input == passw:
         key = election_key.generate_key()
         sleep(1)
